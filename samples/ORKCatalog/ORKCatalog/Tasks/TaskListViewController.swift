@@ -71,10 +71,10 @@ class TaskListViewController: UITableViewController, ORKTaskViewControllerDelega
         return TaskListRow.sections[section].rows.count
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+/*    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return TaskListRow.sections[section].title
     }
-    
+  */  
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifier.Default.rawValue, forIndexPath: indexPath)
         

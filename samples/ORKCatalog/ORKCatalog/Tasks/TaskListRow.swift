@@ -110,6 +110,7 @@ enum TaskListRow: Int, CustomStringConvertible {
     /// Returns an array of all the task list row enum cases.
     static var sections: [ TaskListRowSection ] {
         return [
+/*
             TaskListRowSection(title: "Surveys", rows:
                 [
                     .Form,
@@ -136,12 +137,12 @@ enum TaskListRow: Int, CustomStringConvertible {
                 ]),
             TaskListRowSection(title: "Onboarding", rows:
                 [
-                    .EligibilityTask,
+                    //.EligibilityTask,
                     .Consent,
                     .AccountCreation,
                     .Login,
                     .Passcode,
-                ]),
+                ]),*/
             TaskListRowSection(title: "Active Tasks", rows:
                 [
                     .Audio,

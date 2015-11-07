@@ -41,13 +41,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     var taskListViewController: TaskListViewController {
-        let navigationController = tabBarController.viewControllers!.first as! UINavigationController
+        let navigationController = tabBarController.viewControllers![1] as! UINavigationController
+        
+        //return navigationController.visibleViewController as! TaskListViewController
+        
+        // Find the `ResultViewController` (if any) that's a view controller in the navigation controller.
+        return navigationController.viewControllers.filter { $0 is TaskListViewController }.first as! TaskListViewController
+ 
+    }
 
-        return navigationController.visibleViewController as! TaskListViewController
+    var activityViewController: ActivityViewController {
+        let navigationController = tabBarController.viewControllers!.first as! UINavigationController
+        
+        return navigationController.visibleViewController as! ActivityViewController
     }
     
     var resultViewController: ResultViewController? {
-        let navigationController = tabBarController.viewControllers![1] as! UINavigationController
+        let navigationController = tabBarController.viewControllers![3] as! UINavigationController
 
         // Find the `ResultViewController` (if any) that's a view controller in the navigation controller.
         return navigationController.viewControllers.filter { $0 is ResultViewController }.first as? ResultViewController
